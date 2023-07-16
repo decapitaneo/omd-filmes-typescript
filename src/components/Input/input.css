@@ -1,0 +1,23 @@
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.input-wrapper input{
+    margin: 1rem;   
+}
+
+.search {
+    width: 80%;
+    max-width: 460px;
+    height: 48px;
+    padding: 20px;
+    font: 400 1.25rem/1.25 Poppins,sans-serif;
+    text-transform: capitalize;
+    border: 2px solid #e08f8f;
+    border-radius: 4px;
+    outline: none;
+}
+
+

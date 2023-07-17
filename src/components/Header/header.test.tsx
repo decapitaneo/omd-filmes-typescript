@@ -16,3 +16,14 @@ test('renders the header component', () => {
   expect(favoritosLink).toBeInTheDocument();
   expect(homeLink).toBeInTheDocument();
 });
+
+// import { render, screen } from "@testing-library/react";
+// import Header from "../Header";
+
+// describe("Header", () => {
+//   it("should render correctly", () => {
+//     render(<Header />);
+//     expect(screen.getByText("Home")).toBeInTheDocument();
+//     expect(screen.getByText("Favorites")).toBeInTheDocument();
+//   });
+// });

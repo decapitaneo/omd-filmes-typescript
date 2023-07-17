@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .meus-filmes ul{
@@ -33,13 +33,14 @@
 
 .meus-filmes ul li span{
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .meus-filmes ul li button {
     font-size: 1.2rem;
     border: 0;
     outline: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0,5s;
@@ -56,3 +57,5 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
+
+  

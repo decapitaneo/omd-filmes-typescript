@@ -88,10 +88,13 @@
       
       .small-container-card{
         flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
       }
 
       .small-container-card-info{
         margin-left: 0;
+        padding-top: 0.5rem;
       }
 
       .small-container-card-info h2{

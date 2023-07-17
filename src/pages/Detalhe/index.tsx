@@ -60,12 +60,11 @@ function Card(){
 
     function salvarFilme(){
         const minhaLista = localStorage.getItem("@dbflix");
-        let filmesSalvos = JSON.parse(minhaLista || "{}") || [];
+        let filmesSalvos = []
+        if (minhaLista) filmesSalvos = JSON.parse(minhaLista);
+
         const hasFilmes = filmesSalvos.some((f: Filme) => f.imdbID === filme.imdbID);
         
-        console.log(imdb);
-
-
         if(hasFilmes){
             alert("Esse filme já está na sua lista!");
             return;
@@ -74,7 +73,7 @@ function Card(){
 
         filmesSalvos.push(filme);
         localStorage.setItem("@dbflix", JSON.stringify(filmesSalvos));
-        toast.success("Filme salvo com sucesso");
+        alert("Filme salvo com sucesso");
     };
 
     const handleImageError = (event: React.FormEvent<HTMLImageElement>) => {
@@ -110,9 +109,7 @@ function Card(){
                     </div>    
             </div>
         </div>
-    )
-    /*Ao clicar em um resultado, a aplicação deve exibir mais detalhes sobre o filme, incluindo a sinopse, o elenco, a duração e outras informações relevantes.*/
-    
+    )    
 }
 
 export default Card;

@@ -12,6 +12,12 @@ function Favoritos(){
 
     useEffect(()=> {
         const minhaLista = localStorage.getItem("@dbflix");
+        if (minhaLista) {
+            const filmes = JSON.parse(minhaLista)
+            setFilmes(filmes)
+        } else {
+            setFilmes([])
+        }
         setFilmes(JSON.parse(minhaLista || "{}") || []);
     }, []);
 

@@ -80,3 +80,22 @@
       display: block;
       margin-top: 2rem;
     }
+
+    @media(min-width: 400px) and (max-width: 874px){
+      .container {
+        margin-bottom: 2rem;
+      }
+      
+      .small-container-card{
+        flex-direction: column;
+      }
+
+      .small-container-card-info{
+        margin-left: 0;
+      }
+
+      .small-container-card-info h2{
+        text-align: center;
+      }
+
+    }

@@ -45,9 +45,7 @@
     font-size: 1.5rem;
 }
 
-.home:hover{
-    background-color: coral;
-}
+
 
 @media(min-width: 400px) and (max-width: 874px){
     .logo{

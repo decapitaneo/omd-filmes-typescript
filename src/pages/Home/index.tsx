@@ -4,7 +4,7 @@ import Cards from "../../components/Cards";
 function Home(){
     return(
         <div className="home">
-            <Cards/>
+            <Cards data-testid="cards-component"/>
         </div>
     )
 

@@ -1,11 +1,11 @@
 //podem ser reutilizados
 import React from 'react';
 import './header.css';
-
 import { Link } from 'react-router-dom';
+
 function Header(){
     return(
-        <header className='header'>
+        <header className='header' data-testid="header">
             <Link className='logo'to='/' > Movie DBFlix</Link>
 
             <div className='menuItems'>

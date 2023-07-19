@@ -60,7 +60,7 @@ function Cards(){
 
 
     return(
-        <div className="homePrincipal">
+        <div className="homePrincipal"  data-testid="cards-component">
             <h1>Welcome ao nosso Movie DBFlix</h1>
 
             <Input handleSearch={changeTitle}/>
@@ -72,7 +72,7 @@ function Cards(){
                             <div className="col-3">
                                 <img src={filme.Poster} alt={filme.Title} onError={handleImageError}></img>
                                 <strong className="title">{filme.Title}</strong>
-                                <p className="dataLancamento">{filme.Year}</p>
+                                <p className="dataLancamento">Lançamento: {filme.Year}</p>
                                 <Link to={`/card/${filme.imdbID}`}> Detalhes </Link>
                             </div>  
                         </div>

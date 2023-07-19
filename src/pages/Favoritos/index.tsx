@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./favoritos.css";
+import { toast } from "react-toastify";
 
 interface Filme {
     imdbID: string
@@ -18,8 +19,9 @@ function Favoritos(){
         } else {
             setFilmes([])
         }
-        setFilmes(JSON.parse(minhaLista || "{}") || []);
+        //setFilmes(JSON.parse(minhaLista || "{}") || []);
     }, []);
+    
 
     function excluirFilme(imdb: string){
         let filtroFilmes = filmes.filter((item) => {
@@ -28,7 +30,7 @@ function Favoritos(){
         
         setFilmes(filtroFilmes);
         localStorage.setItem("@dbflix", JSON.stringify(filtroFilmes));
-        alert("Filme removido com sucesso")
+        toast.success("Filme removido com sucesso")
     }
 
 

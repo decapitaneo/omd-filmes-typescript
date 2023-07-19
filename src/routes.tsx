@@ -9,15 +9,15 @@ import Erro from './pages/Erro';
 function RoutesApp(){
     return(
         <BrowserRouter>
-        <Header/>
-        <Routes>
-            <Route path="/" element={ <Home/>}/>
-            <Route path="/card/:id" element={ <Card/> } />
-            <Route path="/favoritos" element={ <Favoritos/>}/>
+            <Header data-testid="app-header" />
+            <Routes data-testid="routes-app">
+                <Route path="/" element={ <Home/>}/>
+                <Route path="/card/:id" element={ <Card/> } />
+                <Route path="/favoritos" element={ <Favoritos/>}/>
 
-            <Route path="*" element={ <Erro/>} />       
-        </Routes>
-    </BrowserRouter>
+                <Route path="*" element={ <Erro/>} />       
+            </Routes>
+        </BrowserRouter>
     )
     
 }

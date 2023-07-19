@@ -41,19 +41,17 @@ function Card(){
             
                 })
                 .then((response) => {
-                    console.log(response.data)
                     setFilme(response.data); 
                     setLoading(false);
                 })
                 .catch(() => {
-                    console.log("filme não encontrado");
                     navigate("/", {replace:true});
                     return;
                 })
             }
             loadFilme();
             return() => {
-                console.log("componente desmontado")
+                //console.log("componente desmontado")
             }
         }, [navigate, imdb]);
     
@@ -66,14 +64,14 @@ function Card(){
         const hasFilmes = filmesSalvos.some((f: Filme) => f.imdbID === filme.imdbID);
         
         if(hasFilmes){
-            alert("Esse filme já está na sua lista!");
+            toast.warn("Esse filme já está na sua lista!");
             return;
         }
     
 
         filmesSalvos.push(filme);
         localStorage.setItem("@dbflix", JSON.stringify(filmesSalvos));
-        alert("Filme salvo com sucesso");
+        toast.success("Filme salvo com sucesso");
     };
 
     const handleImageError = (event: React.FormEvent<HTMLImageElement>) => {

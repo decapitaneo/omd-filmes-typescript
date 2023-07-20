@@ -1,10 +1,15 @@
 .meus-filmes{
+    min-width: 375px;
     max-width: 1300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
+}
+
+.meus-filmes h2{
+    text-align: center;
 }
 
 .meus-filmes ul{
@@ -56,6 +61,11 @@
     object-fit: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+  }
+
+
+  @media(min-width: 375px) and (max-width: 874px){
+
   }
 
   

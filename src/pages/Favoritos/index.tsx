@@ -22,6 +22,9 @@ function Favoritos(){
         //setFilmes(JSON.parse(minhaLista || "{}") || []);
     }, []);
     
+    const handleImageError = (event: React.FormEvent<HTMLImageElement>) => {
+        event.currentTarget.src = 'https://img.freepik.com/free-vector/404-error-with-cute-animal-concept-illustration_114360-1919.jpg?w=826&t=st=1689530720~exp=1689531320~hmac=1a2cb8dca9e303a75deae345add3c31e0066cd36b78f088d989303abeb6ba24a';
+    };
 
     function excluirFilme(imdb: string){
         let filtroFilmes = filmes.filter((item) => {
@@ -43,7 +46,7 @@ function Favoritos(){
                 {filmes.map((item) =>{
                     return(
                         <li key={item.imdbID}>
-                            <img src={item.Poster}></img>
+                            <img src={item.Poster} onError={handleImageError}></img>
                             <span>{item.Title}</span>
                             <div>
                                 <button onClick={() => excluirFilme(item.imdbID)}> Excluir</button>

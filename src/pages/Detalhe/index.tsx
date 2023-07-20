@@ -51,7 +51,6 @@ function Card(){
             }
             loadFilme();
             return() => {
-                //console.log("componente desmontado")
             }
         }, [navigate, imdb]);
     
@@ -77,6 +76,7 @@ function Card(){
     const handleImageError = (event: React.FormEvent<HTMLImageElement>) => {
         event.currentTarget.src = 'https://img.freepik.com/free-vector/404-error-with-cute-animal-concept-illustration_114360-1919.jpg?w=826&t=st=1689530720~exp=1689531320~hmac=1a2cb8dca9e303a75deae345add3c31e0066cd36b78f088d989303abeb6ba24a';
     };
+    console.log(handleImageError);
 
 
     if(loading){

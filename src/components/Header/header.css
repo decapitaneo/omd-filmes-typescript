@@ -1,4 +1,5 @@
 .header{
+    min-width: 375px;
     max-width: 100%;
     background: radial-gradient(#fff, #ffd6d6);
     display: flex;
@@ -14,6 +15,7 @@
     cursor: pointer;
     color: black;
     font-weight: bold;
+    margin-left: 0.5rem;
 }
 
 .menuItems{
@@ -46,9 +48,13 @@
     font-size: 1.5rem;
 }
 
-@media(min-width: 400px) and (max-width: 874px){
+@media(min-width: 375px) and (max-width: 874px){
     .logo{
         font-size: 1.5rem;
+    }
+
+    .menuItems {
+    padding: 0;
     }
 
 }

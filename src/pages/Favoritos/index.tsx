@@ -19,7 +19,6 @@ function Favoritos(){
         } else {
             setFilmes([])
         }
-        //setFilmes(JSON.parse(minhaLista || "{}") || []);
     }, []);
     
     const handleImageError = (event: React.FormEvent<HTMLImageElement>) => {
